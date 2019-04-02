@@ -1,0 +1,26 @@
+CREATE TABLE IF NOT EXISTS kindofsport (
+  id  BIGINT AUTO_INCREMENT PRIMARY KEY,
+  name_kindofsport VARCHAR(1000) NOT NULL
+);
+CREATE TABLE IF NOT EXISTS category (
+  id  BIGINT AUTO_INCREMENT PRIMARY KEY,
+  name_category VARCHAR(1000) NOT NULL,
+  kindofsport_id  BIGINT NOT NULL,
+  FOREIGN KEY (kindofsport_id) REFERENCES kindofsport(id)
+);
+CREATE TABLE IF NOT EXISTS source (
+  id  BIGINT AUTO_INCREMENT PRIMARY KEY,
+  name_source VARCHAR(1000)  NOT NULL
+);
+CREATE TABLE IF NOT EXISTS news (
+ id  BIGINT AUTO_INCREMENT PRIMARY KEY,
+ title VARCHAR(1000)   NOT NULL ,
+ description VARCHAR(5000)   NOT NULL ,
+ url_to_source VARCHAR(1000)   NOT NULL ,
+ url_img VARCHAR(1000)   NOT NULL ,
+ publish_at VARCHAR(1000)   NOT NULL ,
+ source_id  BIGINT NOT NULL,
+ category_id  BIGINT NOT NULL,
+ FOREIGN KEY (source_id) REFERENCES source(id),
+ FOREIGN KEY (category_id) REFERENCES category(id)
+ );

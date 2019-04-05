@@ -2,16 +2,51 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06eb7651-a68d-4085-87ad-639a68d950d5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/44be44a1-80da-401f-9c73-e46781b4f89e.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/44be44a1-80da-401f-9c73-e46781b4f89e/storage_v2/_src_/database/dd0kcalhp69go5.DwjGyw.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/44be44a1-80da-401f-9c73-e46781b4f89e/storage_v2/_src_/database/dd0kcalhp69go5.DwjGyw/schema/public.abK9xQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/54e61b6b-9c24-4b2b-9e5b-12b2dc0d3e66.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/CustomerDemoApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/model/BaseEntity.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/model/Category.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/model/Client.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/model/Customer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/model/KindOfSport.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/model/News.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/model/Source.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/parser/Data.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/parser/ParsingFNK.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/parser/ParsingSportBoxBasketball.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/parser/ParsingSportBoxBiatlon.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/parser/ParsingSportBoxBoks.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/parser/ParsingSportBoxFootball.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/parser/ParsingSportBoxHockey.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/parser/ParsingSportBoxMma.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/parser/ParsingSportBoxTennis.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/parser/ParsingSportBoxVolleyball.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/parser/ParsingSportsFootball.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/repository/CategoryRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/repository/ClientRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/repository/CustomerRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/repository/KindOfSportRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/repository/NewsRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/repository/SourceRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/rest/ClientRestControllerV1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/rest/CustomerRestControllerV1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/rest/NewsRestController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/rest/UpdateRestController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/service/CategoryService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/service/CategoryServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/service/ClientService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/service/ClientServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/service/CustomerService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/service/CustomerServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/service/KindOfSportService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/service/KindOfSportServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/service/NewsService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/service/NewsServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/service/SourceService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/service/SourceServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/shedule/ScheduledTasks.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/rest/NewsRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/rest/NewsRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -95,7 +130,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="cell" value="5" />
-          <entry key="java" value="5125" />
+          <entry key="java" value="5127" />
           <entry key="properties" value="36" />
           <entry key="sql" value="716" />
           <entry key="txt" value="51" />
@@ -104,7 +139,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="5125" />
+          <entry key="JAVA" value="5127" />
           <entry key="PLAIN_TEXT" value="51" />
           <entry key="Properties" value="36" />
           <entry key="SQL" value="637" />
@@ -159,8 +194,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/main/rest/NewsRestController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="52" column="32" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
+            <state relative-caret-position="268">
+              <caret line="51" column="27" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -474,7 +509,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554367101743" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554374913221" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -527,12 +562,12 @@
       <workItem from="1553249375158" duration="8463000" />
       <workItem from="1553278356526" duration="10625000" />
       <workItem from="1554234557394" duration="2267000" />
-      <workItem from="1554306684752" duration="4791000" />
+      <workItem from="1554306684752" duration="4991000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67569000" />
+    <option name="totallyTimeSpent" value="67769000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -547,7 +582,7 @@
     <frame x="0" y="23" width="1680" height="899" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21794872" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21794872" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -557,13 +592,13 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32961586" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4884005" weight="0.26641884" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4884005" visible="true" weight="0.26641884" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39900866" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.498779" weight="0.32961586" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32961586" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4993895" visible="true" weight="0.33828998" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4993895" weight="0.33828998" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.51159954" side_tool="true" weight="0.40520447" />
       <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.495116" weight="0.32961586" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" sideWeight="0.4993895" weight="0.32961586" />
@@ -1008,8 +1043,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/main/rest/NewsRestController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="52" column="32" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
+        <state relative-caret-position="268">
+          <caret line="51" column="27" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

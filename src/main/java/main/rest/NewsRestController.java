@@ -50,7 +50,7 @@ public class NewsRestController {
     }
     @CrossOrigin(origins="*")// in this line add your url and thats is all for spring boot side
     @RequestMapping(value = "{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<String> get(@PathVariable("id") Long id) {
+    public ResponseEntity<String> get2(@PathVariable("id") Long id) {
 
 //       List<News> news =  newsService.getAll();
 

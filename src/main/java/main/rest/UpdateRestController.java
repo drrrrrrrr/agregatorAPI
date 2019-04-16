@@ -38,18 +38,33 @@ public class UpdateRestController {
 
     @RequestMapping(value = "{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public ResponseEntity<String> update(@PathVariable("id") Long id) {
+//new ParsingSport//        new ParsingSportBoxFootball(), new ParsingSportBoxHockey(), new ParsingSportBoxHockey(),
 
-        Data[] data = { new ParsingFNK()};
+
+
+//        Data[] data = {new ParsingSportsFootball(), new ParsingSportBoxBoks(), new ParsingSportBoxBiatlon(),
+//                new ParsingSportBoxFootball(), new ParsingSportBoxHockey(), new ParsingSportBoxTennis(), new ParsingBloodMMA(), new ParsingVseNaBox(),
+//                new ParsingChampinatFootball(), new ParsingSportBoxBasketball(), new ParsingSportBoxMma(), new ParsingFNK(), new ParsingSportBoxVolleyball(),
+//        new ParsingSportsFootball(), new ParsingSportBoxBoks(), new ParsingSportBoxBiatlon()};
+                Data[] data = {new ParsingChampinatFootball()};
 
         Integer k = 0;
 
         for (Data p : data) {
 
             ArrayList<String[]> news = p.getNews();
+            k = news.size();
             for (String[] item : news) {
                 try {
+                    if(newsService.findByName(item[0]) != null)
+                        continue;
                     if(item.length ==5) {
-                        News article = new News(item[0], item[1], " ", item[4], item[2], sourceService.getById(p.source_id), categoryService.findByName(item[3]));
+                        News article = new News(item[0], item[1], item[2], "", item[3], sourceService.getById(p.source_id), categoryService.findByName(item[4]));
+                        newsService.save(article);
+                        k++;
+                    }
+                    if(item.length ==6) {
+                        News article = new News(item[0], item[1], item[2], item[5], item[3], sourceService.getById(p.source_id), categoryService.findByName(item[4]));
                         newsService.save(article);
                         k++;
                     }
@@ -60,9 +75,11 @@ public class UpdateRestController {
                     }
 
                 } catch (Exception m) {
-
+                    String o  = "sss";
                 }
             }
+            k = news.size();
+
         }
 
         return new ResponseEntity<>("" + k, HttpStatus.OK);

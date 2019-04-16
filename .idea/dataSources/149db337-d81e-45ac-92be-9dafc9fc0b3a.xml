@@ -1110,5 +1110,211 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
+    <table id="279" parent="3" name="category"/>
+    <table id="280" parent="3" name="comments"/>
+    <table id="281" parent="3" name="kindofsport"/>
+    <table id="282" parent="3" name="news"/>
+    <table id="283" parent="3" name="source"/>
+    <column id="284" parent="279" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="285" parent="279" name="name_category">
+      <Position>2</Position>
+      <DataType>varchar(1000)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+      <Collation>cp1251_general_ci</Collation>
+    </column>
+    <column id="286" parent="279" name="kindofsport_id">
+      <Position>3</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="287" parent="279" name="kindofsport_id">
+      <ColNames>kindofsport_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="288" parent="279" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="289" parent="279" name="category_ibfk_1">
+      <ColNames>kindofsport_id</ColNames>
+      <RefSchemaName>customerdemo</RefSchemaName>
+      <RefTableName>kindofsport</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="290" parent="280" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="291" parent="280" name="description">
+      <Position>2</Position>
+      <DataType>varchar(1000)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+      <Collation>cp1251_general_ci</Collation>
+    </column>
+    <column id="292" parent="280" name="dateComment">
+      <Position>3</Position>
+      <DataType>varchar(1000)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+      <Collation>cp1251_general_ci</Collation>
+    </column>
+    <column id="293" parent="280" name="email">
+      <Position>4</Position>
+      <DataType>varchar(1000)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+      <Collation>cp1251_general_ci</Collation>
+    </column>
+    <column id="294" parent="280" name="news_id">
+      <Position>5</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="295" parent="280" name="news_id">
+      <ColNames>news_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="296" parent="280" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="297" parent="280" name="comments_ibfk_1">
+      <ColNames>news_id</ColNames>
+      <RefSchemaName>customerdemo</RefSchemaName>
+      <RefTableName>news</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="298" parent="281" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="299" parent="281" name="name_kindofsport">
+      <Position>2</Position>
+      <DataType>varchar(1000)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+      <Collation>cp1251_general_ci</Collation>
+    </column>
+    <key id="300" parent="281" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="301" parent="282" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="302" parent="282" name="title">
+      <Position>2</Position>
+      <DataType>varchar(1000)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+      <Collation>cp1251_general_ci</Collation>
+    </column>
+    <column id="303" parent="282" name="description">
+      <Position>3</Position>
+      <DataType>varchar(5000)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+      <Collation>cp1251_general_ci</Collation>
+    </column>
+    <column id="304" parent="282" name="url_to_source">
+      <Position>4</Position>
+      <DataType>varchar(1000)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+      <Collation>cp1251_general_ci</Collation>
+    </column>
+    <column id="305" parent="282" name="url_img">
+      <Position>5</Position>
+      <DataType>varchar(1000)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+      <Collation>cp1251_general_ci</Collation>
+    </column>
+    <column id="306" parent="282" name="publish_at">
+      <Position>6</Position>
+      <DataType>varchar(1000)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+      <Collation>cp1251_general_ci</Collation>
+    </column>
+    <column id="307" parent="282" name="source_id">
+      <Position>7</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="308" parent="282" name="category_id">
+      <Position>8</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="309" parent="282" name="source_id">
+      <ColNames>source_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="310" parent="282" name="category_id">
+      <ColNames>category_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="311" parent="282" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="312" parent="282" name="news_ibfk_1">
+      <ColNames>source_id</ColNames>
+      <RefSchemaName>customerdemo</RefSchemaName>
+      <RefTableName>source</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="313" parent="282" name="news_ibfk_2">
+      <ColNames>category_id</ColNames>
+      <RefSchemaName>customerdemo</RefSchemaName>
+      <RefTableName>category</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="314" parent="283" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="315" parent="283" name="name_source">
+      <Position>2</Position>
+      <DataType>varchar(1000)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+      <Collation>cp1251_general_ci</Collation>
+    </column>
+    <key id="316" parent="283" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
   </database-model>
 </dataSource>

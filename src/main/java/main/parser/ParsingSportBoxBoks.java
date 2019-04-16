@@ -34,13 +34,21 @@ public class ParsingSportBoxBoks extends Data {
 
                 for (Element el : elements) {
                     try {
-                        text = el.select("a").attr("href");
-                        Document article = Jsoup.connect("https://news.sportbox.ru" + text).get();
+                        text = "https://news.sportbox.ru" + el.select("a").attr("href");
+                        Document article = Jsoup.connect(text).get();
                         String title = article.select(".node-header__title").first().text();
                         String description = article.select(".js-mediator-article").first().text();
+                        Elements oo =   article.getElementsByTag("meta");
+                        String year =  "";
+                        for(Element a : oo) {
+                            if(a.attr("itemprop").startsWith("dateCreated")) {
+                                year = a.attr("content");
+                            }
+                        }
                         String data = article.select(".b-author__date").first().text();
+                        data = year + " " + data.split(" ")[data.split(" ").length - 1];
                         String url_img = article.select(".node-content__logo > a").first().attr("href");
-                        String[] items = {title, description.trim(), data, category_name, url_img};
+                        String[] items = {title, description.trim(),text, data, category_name, url_img};
                         news.add(items);
                     }
                     catch (Exception e) {

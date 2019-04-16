@@ -16,4 +16,9 @@ public class KindOfSportServiceImpl implements KindOfSportService {
     public KindOfSport getById(Long id) {
         return kindOfSportRepository.findOne(id);
     }
+
+//    @Override
+//    public KindOfSport findByName(String name_kindOfSport) {
+//        return kindOfSportRepository.findByName(name_kindOfSport);
+//    }
 }

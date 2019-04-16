@@ -804,205 +804,157 @@
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <table id="201" parent="2" name="category"/>
-    <table id="202" parent="2" name="clients"/>
-    <table id="203" parent="2" name="customers"/>
-    <table id="204" parent="2" name="kindofsport"/>
-    <table id="205" parent="2" name="news"/>
-    <table id="206" parent="2" name="source"/>
-    <column id="207" parent="201" name="id">
+    <table id="202" parent="2" name="kindofsport"/>
+    <table id="203" parent="2" name="news"/>
+    <table id="204" parent="2" name="source"/>
+    <column id="205" parent="201" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="208" parent="201" name="name_category">
+    <column id="206" parent="201" name="name_category">
       <Position>2</Position>
       <DataType>varchar(1000)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
+      <Collation>cp1251_general_ci</Collation>
     </column>
-    <column id="209" parent="201" name="kindofsport_id">
+    <column id="207" parent="201" name="kindofsport_id">
       <Position>3</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="210" parent="201" name="FKij9l1vnx4c1sdbqye095cww2n">
+    <index id="208" parent="201" name="kindofsport_id">
       <ColNames>kindofsport_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="211" parent="201" name="PRIMARY">
+    <key id="209" parent="201" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="212" parent="201" name="FKij9l1vnx4c1sdbqye095cww2n">
+    <foreign-key id="210" parent="201" name="category_ibfk_1">
       <ColNames>kindofsport_id</ColNames>
       <RefSchemaName>heroku_4749717628fdb6a</RefSchemaName>
       <RefTableName>kindofsport</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="213" parent="201" name="category_ibfk_1">
-      <ColNames>kindofsport_id</ColNames>
-      <RefSchemaName>heroku_4749717628fdb6a</RefSchemaName>
-      <RefTableName>kindofsport</RefTableName>
-      <RefColNames>id</RefColNames>
-    </foreign-key>
-    <column id="214" parent="202" name="id">
+    <column id="211" parent="202" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="215" parent="202" name="first_name">
-      <Position>2</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="216" parent="202" name="last_name">
-      <Position>3</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="217" parent="202" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="218" parent="203" name="id">
-      <Position>1</Position>
-      <DataType>bigint(20)|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="219" parent="203" name="address">
-      <Position>2</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="220" parent="203" name="budget">
-      <Position>3</Position>
-      <DataType>decimal(19,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="221" parent="203" name="first_name">
-      <Position>4</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="222" parent="203" name="last_name">
-      <Position>5</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="223" parent="203" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="224" parent="204" name="id">
-      <Position>1</Position>
-      <DataType>bigint(20)|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="225" parent="204" name="name_kindofsport">
+    <column id="212" parent="202" name="name_kindofsport">
       <Position>2</Position>
       <DataType>varchar(1000)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
+      <Collation>cp1251_general_ci</Collation>
     </column>
-    <key id="226" parent="204" name="PRIMARY">
+    <key id="213" parent="202" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="227" parent="205" name="id">
+    <column id="214" parent="203" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="228" parent="205" name="description">
+    <column id="215" parent="203" name="title">
       <Position>2</Position>
-      <DataType>varchar(255)|0s</DataType>
+      <DataType>varchar(1000)|0s</DataType>
+      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
+      <Collation>cp1251_general_ci</Collation>
     </column>
-    <column id="229" parent="205" name="publish_at">
+    <column id="216" parent="203" name="description">
       <Position>3</Position>
-      <DataType>varchar(255)|0s</DataType>
+      <DataType>varchar(5000)|0s</DataType>
+      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
+      <Collation>cp1251_general_ci</Collation>
     </column>
-    <column id="230" parent="205" name="title">
+    <column id="217" parent="203" name="url_to_source">
       <Position>4</Position>
-      <DataType>varchar(255)|0s</DataType>
+      <DataType>varchar(1000)|0s</DataType>
+      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
+      <Collation>cp1251_general_ci</Collation>
     </column>
-    <column id="231" parent="205" name="url_img">
+    <column id="218" parent="203" name="url_img">
       <Position>5</Position>
-      <DataType>varchar(255)|0s</DataType>
+      <DataType>varchar(1000)|0s</DataType>
+      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
+      <Collation>cp1251_general_ci</Collation>
     </column>
-    <column id="232" parent="205" name="url_to_source">
+    <column id="219" parent="203" name="publish_at">
       <Position>6</Position>
-      <DataType>varchar(255)|0s</DataType>
+      <DataType>varchar(1000)|0s</DataType>
+      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
+      <Collation>cp1251_general_ci</Collation>
     </column>
-    <column id="233" parent="205" name="category_id">
+    <column id="220" parent="203" name="source_id">
       <Position>7</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="234" parent="205" name="source_id">
+    <column id="221" parent="203" name="category_id">
       <Position>8</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="235" parent="205" name="FKryugyuqj7jjkqd3byc5meoocy">
-      <ColNames>category_id</ColNames>
-      <Type>btree</Type>
-    </index>
-    <index id="236" parent="205" name="FKs163ibyowy1xkda9i0ewv5ph">
+    <index id="222" parent="203" name="source_id">
       <ColNames>source_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="237" parent="205" name="PRIMARY">
+    <index id="223" parent="203" name="category_id">
+      <ColNames>category_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="224" parent="203" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="238" parent="205" name="FKryugyuqj7jjkqd3byc5meoocy">
-      <ColNames>category_id</ColNames>
-      <RefSchemaName>heroku_4749717628fdb6a</RefSchemaName>
-      <RefTableName>category</RefTableName>
-      <RefColNames>id</RefColNames>
-    </foreign-key>
-    <foreign-key id="239" parent="205" name="FKs163ibyowy1xkda9i0ewv5ph">
+    <foreign-key id="225" parent="203" name="news_ibfk_1">
       <ColNames>source_id</ColNames>
       <RefSchemaName>heroku_4749717628fdb6a</RefSchemaName>
       <RefTableName>source</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="240" parent="206" name="id">
+    <foreign-key id="226" parent="203" name="news_ibfk_2">
+      <ColNames>category_id</ColNames>
+      <RefSchemaName>heroku_4749717628fdb6a</RefSchemaName>
+      <RefTableName>category</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="227" parent="204" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="241" parent="206" name="name_source">
+    <column id="228" parent="204" name="name_source">
       <Position>2</Position>
-      <DataType>varchar(255)|0s</DataType>
+      <DataType>varchar(1000)|0s</DataType>
+      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
+      <Collation>cp1251_general_ci</Collation>
     </column>
-    <key id="242" parent="206" name="PRIMARY">
+    <key id="229" parent="204" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>

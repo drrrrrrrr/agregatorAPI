@@ -35,4 +35,9 @@ public class NewsServiceImpl implements NewsService {
     public List<News> getAll() {
         return this.newsRepository.findAll();
     }
+
+    @Override
+    public News findByName(String name_news) {
+        return  this.newsRepository.findByName(name_news);
+    }
 }

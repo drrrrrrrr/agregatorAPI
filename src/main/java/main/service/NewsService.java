@@ -1,5 +1,6 @@
 package main.service;
 
+import main.model.Category;
 import main.model.News;
 
 import java.util.ArrayList;
@@ -10,4 +11,5 @@ public interface NewsService {
     void save(News news);
     void save(ArrayList<News> news);
     List<News> getAll();
+    News findByName(String name_news);
 }

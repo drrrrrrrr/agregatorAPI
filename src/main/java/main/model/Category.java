@@ -26,5 +26,8 @@ public class Category  extends BaseEntity{
     public  Category() {
 
     }
+    public String getName() {
+        return name;
+    }
 
 }

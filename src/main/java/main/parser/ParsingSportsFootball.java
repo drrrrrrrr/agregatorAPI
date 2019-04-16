@@ -15,7 +15,7 @@ public class ParsingSportsFootball extends Data {
         source_id = 3L;
         category_id = 1L;
         categories_name = new String[] {
-                "england"};
+                "germany","england","spain","france"};
         categories_nameDic = new HashMap<String, String>();
         categories_nameDic.put("england", "england");
         categories_nameDic.put("germany", "germany");
@@ -30,22 +30,25 @@ public class ParsingSportsFootball extends Data {
         try {
 
             for(String category_name : categories_name) {
-                Document document = Jsoup.connect("https://www.sports.ru/football/" +categories_nameDic.get(category_name)).get();
-                Elements elements = document.select("a.h2");
+                Document document = Jsoup.connect("https://www.sports.ru/football/" +categories_nameDic.get(category_name))
+                        .userAgent("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.152 Safari/537.36").get();
+                Elements elements = document.select(".h2");
                 String text = "";
 
                 for (Element el : elements) {
                     try {
                         text = el.select("a").attr("href");
-                        Document article = Jsoup.connect(text).get();
+                        Document article = Jsoup.connect(text).userAgent("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.152 Safari/537.36")
+                                .get();
                         String title = article.select("h1").first().text();
                         String description = article.select(".material-item__content").first().text();
-                        String data = article.select(".blog-post__header__date").first().text();
+                        String data = article.select(".blog-post__header__date").first().attr("datetime");
 //                        String url_img = article.select(".node-content__logo > a").first().attr("href");
-                        String[] items = {title, description.trim(), data, category_name};
+                        String[] items = {title, description.trim(), text, data, category_name, " "};
                         news.add(items);
                     }
                     catch (Exception e) {
+                        String m  = "a";
 
                     }
                 }

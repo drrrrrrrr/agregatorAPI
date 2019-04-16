@@ -51,7 +51,7 @@ public class News extends BaseEntity{
     private String url_img;
 
     public String getUrl_img() {
-        return this.url_to_source;
+        return this.url_img;
     }
     public void setUrl_img(String url_img) {
         this.url_img = url_img;

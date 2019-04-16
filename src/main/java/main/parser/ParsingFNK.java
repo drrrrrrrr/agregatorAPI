@@ -26,7 +26,7 @@ public class ParsingFNK extends Data {
         source_id = 1L;
         category_id = 1L;
         categories_name = new String[] {
-                "england", "germany","spain", "france", "holland" };
+                "england", "germany","spain", "france", "holland","league", "uefa_cup"};
     }
 
     @Override
@@ -40,12 +40,13 @@ public class ParsingFNK extends Data {
 
                 for (Element el : elements) {
                     try {
-                        text = el.select("a").attr("href");
-                        Document article = Jsoup.connect("http://football.kulichki.net" + text).get();
+                        text = "http://football.kulichki.net"  + el.select("a").attr("href");
+                        Document article = Jsoup.connect(text).get();
                         String title = article.select(".title_n").first().text();
                         String description = article.select(".text_n").first().text();
                         String data = article.select(".date_n").first().text();
-                        String[] items = {title, description.trim(), data, category_name};
+                        data = data.split(" ")[0] + " "+ data.split(" ")[1];
+                        String[] items = {title, description.trim(), text, data, category_name};
                         news.add(items);
                     }
                     catch (Exception e) {
